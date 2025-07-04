@@ -1,0 +1,103 @@
+/* static/css/style.css */
+:root {
+    --light-bg: #f8f9fa;
+    --light-card-bg: #ffffff;
+    --light-text: #212529;
+    --light-border: #dee2e6;
+    --dark-bg: #1a1a1a;
+    --dark-card-bg: #2c2c2c;
+    --dark-text: #e9ecef;
+    --dark-border: #444444;
+    --bs-primary: #0d6efd;
+    --bs-primary-rgb: 13, 110, 253;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.dark-mode .card-custom,
+body.dark-mode .auth-card {
+    background-color: var(--dark-card-bg);
+    border-color: var(--dark-border);
+}
+
+body.dark-mode .form-control {
+    background-color: #3a3a3a;
+    border-color: var(--dark-border);
+    color: var(--dark-text);
+}
+
+body.dark-mode .form-control:focus {
+    background-color: #3a3a3a;
+    border-color: var(--bs-primary);
+    color: var(--dark-text);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+body.dark-mode .text-muted {
+    color: #a0a0a0 !important;
+}
+
+body.dark-mode .alert-info {
+    background-color: rgba(var(--bs-primary-rgb), 0.2);
+    border-color: rgba(var(--bs-primary-rgb), 0.3);
+    color: #80baff;
+}
+
+body.dark-mode .border-top {
+    border-color: var(--dark-border) !important;
+}
+
+.bg-dark-custom {
+    background-color: #212529 !important;
+}
+
+.card-custom {
+    background-color: var(--light-card-bg);
+    border: 1px solid var(--light-border);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.card-header-custom {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--light-border);
+    transition: border-color 0.3s ease;
+    background-color: rgba(0,0,0,0.02);
+}
+
+body.dark-mode .card-header-custom {
+    background-color: rgba(255,255,255,0.03);
+    border-color: var(--dark-border);
+}
+
+.card-body-custom {
+    padding: 1.25rem;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+.form-check-input:checked {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+
+#bandwidth-chart {
+    min-height: 300px;
+}
